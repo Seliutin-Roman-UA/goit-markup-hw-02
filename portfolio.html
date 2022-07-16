@@ -43,16 +43,16 @@
   <body>
     <main>
       <ul class="filter">
-        <li><div class="first">Все</div></li>
-        <li><div>Веб-сайты</div></li>
-        <li><div>Приложения</div></li>
-        <li><div>Дизайн</div></li>
-        <li><div>Маркетинг</div></li>
+        <li id="ALL">Все</li>
+        <li id="WEB">Веб-сайты</li>
+        <li id="APP">Приложения</li>
+        <li id="DESIGN">Дизайн</li>
+        <li id="MARKETING">Маркетинг</li>
       </ul>
-      <div></div>
+
       <h1>проекты</h1>
-      <ul class="projects">
-        <li>
+      <ul id="projects" class="projects">
+        <li class="web">
           <img
             src="./images/project-1.png"
             alt="поект первый"
@@ -62,7 +62,7 @@
           <h2>Технокряк</h2>
           <p>Веб-сайт</p>
         </li>
-        <li>
+        <li class="desine">
           <img
             src="./images/project-2.png"
             alt="поект второй"
@@ -72,7 +72,7 @@
           <h2>Постер New Orlean vs Golden Star</h2>
           <p>Дизайн</p>
         </li>
-        <li>
+        <li class="app">
           <img
             src="./images/project-3.png"
             alt="поект третий"
@@ -82,7 +82,7 @@
           <h2>Ресторан Seafood</h2>
           <p>Приложение</p>
         </li>
-        <li>
+        <li class="marketing">
           <img
             src="./images/project4.png"
             alt="поект четвертый"
@@ -93,7 +93,7 @@
           <p>Маркетинг</p>
         </li>
 
-        <li>
+        <li class="app">
           <img
             src="./images/project-4.png"
             alt="поект пятый"
@@ -103,7 +103,7 @@
           <h2>Проект Boxes</h2>
           <p>Приложение</p>
         </li>
-        <li>
+        <li class="web">
           <img
             src="./images/project-6.png"
             alt="поект шестой"
@@ -113,7 +113,7 @@
           <h2>Inspiration has no Borders</h2>
           <p>Веб-сайт</p>
         </li>
-        <li>
+        <li class="desine">
           <img
             src="./images/project-7.png"
             alt="поект седьмой"
@@ -123,7 +123,7 @@
           <h2>Издание Limited Edition</h2>
           <p>Дизайн</p>
         </li>
-        <li>
+        <li class="app">
           <img
             src="./images/project-8.png"
             alt="поект восьмой"
@@ -133,7 +133,7 @@
           <h2>Проект LAB</h2>
           <p>Маркетинг</p>
         </li>
-        <li>
+        <li class="app">
           <img
             src="./images/project-9.png"
             alt="поект девятый"
@@ -146,7 +146,7 @@
       </ul>
     </main>
 
-     <footer>
+    <footer>
       <div class="logo">
         <a href="/index.html" lang="en">
           <span class="logo-beginning">Web</span
@@ -164,5 +164,73 @@
         </div>
       </address>
     </footer>
+
+    <script>
+      function invisible() {
+        for (let elem of document.querySelectorAll("#projects li")) {
+          elem.style.display = "none";
+        }
+      }
+      function changeStyleFilter() {
+        for (let elem of document.querySelectorAll(".filter li")) {
+          elem.style.backgroundColor = "#f5f4fa";
+          elem.style.color = "#212121";
+        }
+      }
+
+      document.getElementById("ALL").addEventListener("click", () => {
+        invisible();
+        changeStyleFilter();
+
+        for (let elem of document.querySelectorAll("#projects li")) {
+          elem.style.display = "block";
+        }
+
+        document.getElementById("ALL").style.backgroundColor = "#2196f3";
+        document.getElementById("ALL").style.color = "#ffffff";
+      });
+
+      document.getElementById("WEB").addEventListener("click", () => {
+        invisible();
+        changeStyleFilter();
+
+        for (let elem of document.querySelectorAll("#projects .web")) {
+          elem.style.display = "block";
+
+          document.getElementById("WEB").style.backgroundColor = "#2196f3";
+          document.getElementById("WEB").style.color = "#ffffff";
+        }
+      });
+      document.getElementById("APP").addEventListener("click", () => {
+        invisible();
+        changeStyleFilter();
+        for (let elem of document.querySelectorAll("#projects .app")) {
+          elem.style.display = "block";
+
+          document.getElementById("APP").style.backgroundColor = "#2196f3";
+          document.getElementById("APP").style.color = "#ffffff";
+        }
+      });
+      document.getElementById("DESIGN").addEventListener("click", () => {
+        invisible();
+        changeStyleFilter();
+        for (let elem of document.querySelectorAll("#projects .desine")) {
+          elem.style.display = "block";
+
+          document.getElementById("DESIGN").style.backgroundColor = "#2196f3";
+          document.getElementById("DESIGN").style.color = "#ffffff";
+        }
+      });
+
+      document.getElementById("MARKETING").addEventListener("click", () => {
+        invisible();
+        changeStyleFilter();
+        for (let elem of document.querySelectorAll("#projects .marketing")) {
+          elem.style.display = "block";
+        }
+        document.getElementById("MARKETING").style.backgroundColor = "#2196f3";
+        document.getElementById("MARKETING").style.color = "#ffffff";
+      });
+    </script>
   </body>
 </html>

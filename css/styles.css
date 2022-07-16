@@ -8,10 +8,6 @@
 }
 body {
   width: 1600px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-size: 14px;
-  color: var(--dark-grey);
 }
 
 li {
@@ -20,22 +16,103 @@ li {
 a {
   text-decoration: none;
 }
-.page-haeder * {
-  display: inline-flex;
+
+/* Font section */
+
+/* font Rboto weight 900 size 44px */
+.hero h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+}
+/* font Rboto weight 700 size 36px */
+.service h2,
+.team h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+/* font Rboto weight 700 size 16px */
+.hero button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+/* font Rboto weight 500 size 16px */
+.team h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* font Rboto weight 400 size 16px */
+.team p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* font Rboto weight 700 size 14px */
+.feature h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* font Rboto weight 500 size 14px */
+.nav-links li,
+.contacts a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+/* font Rboto weight 400 size 14px */
+.feature ul li p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Flex - contener */
+.page-haeder,
+.page-haeder .nav,
+.page-haeder .nav-links,
+.hero,
+.feature ul,
+.feature .svg-pic,
+.service ul,
+.team ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
+
+/* Header slyle */
+
+.page-haeder {
+  width: 1170px;
+  height: 80px;
+  margin-left: 215px;
+}
+
 /*  start stilng logo  */
 h1,
 footer a[href="/index.html"] {
-  margin-left: 215px;
-  margin-top: 24px;
-  margin-bottom: 25px;
+  flex-shrink: 0;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
 }
-
 .logo-beginning {
   color: var(--blue-color);
 }
@@ -45,44 +122,32 @@ footer a[href="/index.html"] {
 /* end stiling logo */
 
 .nav-links {
-  margin-left: 68px;
+  column-gap: 50px;
+  margin-left: 50px;
 }
-.nav-links li,
-.contacts a {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-}
-.nav-link-first {
+
+.nav-links:nth-child(1) {
   color: var(--blue-color);
-  margin: 0px 25px 0px 25px;
 }
-.nav-link-second {
-  margin: 0px 25px 0px 25px;
+.nav-links:nth-child(2),
+.nav-links:nth-child(3) {
   color: var(--dark-grey);
 }
-.nav-link-third {
-  margin: 0px 25px 0px 25px;
-  color: var(--dark-grey);
-}
+
 .nav-links li:hover,
 .nav-links li:active {
   background-color: var(--blue-color);
 }
-.contacts {
-  margin-left: 306px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+.nav-contacts {
+  margin-left: 321px;
 }
 
-a[href="mailto:info@devstudio.com"] {
+.nav-contacts a[href="mailto:info@devstudio.com"] {
   color: var(--blue-color);
-  margin: 0px 25px 0px 25px;
 }
-a[href="tel:+380961111111"] {
-  margin: 0px 25px 0px 25px;
+.nav-contacts a[href="tel:+380961111111"] {
   color: var(--dark-grey);
+  margin-left: 50px;
 }
 a[href="mailto:info@devstudio.com"]:hover,
 a[href="mailto:info@devstudio.com"]:active {
@@ -92,33 +157,25 @@ a[href="tel:+380961111111"]:hover,
 a[href="tel:+380961111111"]:active {
   background-color: var(--blue-color);
 }
-.hero {
-  display: flex;
+
+section.hero {
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 1600px;
   height: 600px;
   background-image: url("../images/bg.png");
 }
-.hero div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .hero h2 {
   width: 696px;
   height: 120px;
-  font-weight: 900;
-  font-size: 44px;
   text-transform: uppercase;
   color: var(--color-wite);
   text-align: center;
-  margin-bottom: 30px;
+  letter-spacing: 0.06em;
 }
 .hero button {
-  font-weight: 700;
-  font-size: 16px;
   color: var(--color-wite);
   background-color: var(--blue-color);
   height: 50px;
@@ -127,89 +184,92 @@ a[href="tel:+380961111111"]:active {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   letter-spacing: 0.06em;
-  margin: auto;
   text-align: center;
 }
+/* СЕКЦИЯ ОСОБЕННОСТИ */
+section.feature {
+  width: 1170px;
+  height: 251px;
+  margin-left: 215px;
+}
+
 .feature h2 {
   display: none;
 }
-.column {
+
+.feature ul {
+  column-gap: 30px;
+}
+
+.feature .svg-pic {
+  justify-content: center;
   width: 270px;
-  height: 251px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-.feature ul,
-.service ul,
-.team ul {
-  display: flex;
-  flex-direction: row;
-  margin-left: 200px;
-  margin-right: 200px;
-  padding: 0px 0px 0px 0px;
-}
-
-.feature li .svg-pic {
   height: 120px;
   background-color: var(--iight-grey-color);
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 .feature li h3 {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--dark-grey);
 }
 
-.service h2,
-.team h2 {
-  font-weight: 700;
-  font-size: 36px;
-  color: var(--dark-grey);
-  text-align: center;
+.feature li p {
+  color: var(--grey);
 }
 
-.service li,
-.team li {
-  margin-right: 15px;
-  margin-left: 15px;
+/* СЕКЦИЯ УСЛУГИ  */
+
+.service h2 {
+  color: var(--dark-grey);
+  text-align: center;
+  margin-bottom: 50px;
 }
+.service ul {
+  width: 1170px;
+  height: 251px;
+  margin-left: 215px;
+  column-gap: 30px;
+}
+
+/* СЕКЦИЯ НАША КОМАНДА */
+
 .team {
   background-color: #f5f4fa;
   height: 648px;
   padding-top: 94px;
 }
 
+.team ul {
+  width: 1170px;
+  margin-left: 215px;
+  column-gap: 30px;
+}
+
 .team h2 {
-  margin-top: 0px;
+  color: var(--dark-grey);
+  text-align: center;
   margin-bottom: 50px;
 }
 
 .team h3 {
-  font-weight: 500;
-  font-size: 16px;
   color: var(--dark-grey);
   text-align: center;
 }
 .team p {
-  font-weight: 400;
-  font-size: 16px;
   color: var(--grey);
   text-align: center;
 }
+/* СЕКЦИЯ ПОДВАЛА */
 footer {
   background-color: #2f303a;
   height: 192px;
   padding-top: 60px;
 }
 
+footer .logo {
+  margin-left: 215px;
+}
 .logo-end-footer {
   color: var(--color-wite);
   width: 231px;
@@ -228,5 +288,5 @@ footer {
 .tel,
 .email {
   margin-top: 10px;
-  margin-left: 190px;
+  margin-left: 215px;
 }
