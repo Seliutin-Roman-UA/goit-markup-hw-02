@@ -120,6 +120,9 @@ main {
   color: #ffffff;
   background-color: #2196f3;
 }
+.filter li:hover {
+  cursor: pointer;
+}
 h1 {
   display: none;
 }
