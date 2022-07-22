@@ -3,183 +3,136 @@
   --black-color: #000000;
   --dark-grey: #212121;
   --grey: #757575;
-  --color-wite: #ffffff;
-  --iight-grey-color: #f5f4fa;
+  --wite: #ffffff;
+  --iight-grey: #f5f4fa;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 body {
-  width: 1600px;
+  font-family: Roboto;
+  color: var(--dark-grey);
+  font-size: 14px;
 }
-
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-
-/* Font section */
-
-/* font Rboto weight 900 size 44px */
-.hero h2 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 44px;
-}
-/* font Rboto weight 700 size 36px */
-.service h2,
-.team h2 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-}
-
-/* font Rboto weight 700 size 16px */
-.hero button {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-}
-/* font Rboto weight 500 size 16px */
-.team h3 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-}
-/* font Rboto weight 400 size 16px */
-.team p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-/* font Rboto weight 700 size 14px */
-.feature h3 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-/* font Rboto weight 500 size 14px */
-.nav-links li,
-.contacts a {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-}
-/* font Rboto weight 400 size 14px */
-.feature ul li p {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+.conteiner {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Flex - contener */
-.page-haeder,
-.page-haeder .nav,
-.page-haeder .nav-links,
-.hero,
-.feature ul,
-.feature .svg-pic,
+.header .conteiner,
+.header-nav,
+.header-nav-list,
+.header-contacts,
+.feature-list,
 .service ul,
 .team ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 /* Header slyle */
 
-.page-haeder {
-  width: 1170px;
-  height: 80px;
-  margin-left: 215px;
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 /*  start stilng logo  */
-h1,
-footer a[href="/index.html"] {
-  flex-shrink: 0;
+.header-logo,
+.footer-logo {
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
 }
-.logo-beginning {
+.logo-web {
   color: var(--blue-color);
 }
-.logo-end {
+.logo-studio {
   color: var(--black-color);
 }
 /* end stiling logo */
 
-.nav-links {
+.header-nav-list {
   column-gap: 50px;
-  margin-left: 50px;
+  margin-left: 93px;
 }
-
-.nav-links:nth-child(1) {
-  color: var(--blue-color);
-}
-.nav-links:nth-child(2),
-.nav-links:nth-child(3) {
+.header-nav-list a {
+  font-weight: 500;
   color: var(--dark-grey);
 }
-
-.nav-links li:hover,
-.nav-links li:active {
-  background-color: var(--blue-color);
-}
-.nav-contacts {
-  margin-left: 321px;
-}
-
-.nav-contacts a[href="mailto:info@devstudio.com"] {
+.header-nav-list a:hover,
+.header-nav-list a:active,
+.header-contacts a:hover,
+.header-contacts a:active {
   color: var(--blue-color);
 }
-.nav-contacts a[href="tel:+380961111111"] {
-  color: var(--dark-grey);
-  margin-left: 50px;
+.header-contacts {
+  column-gap: 50px;
 }
-a[href="mailto:info@devstudio.com"]:hover,
-a[href="mailto:info@devstudio.com"]:active {
-  background-color: var(--dark-grey);
+.header-contacts a {
+  color: var(--grey);
+  font-weight: 500;
 }
-a[href="tel:+380961111111"]:hover,
-a[href="tel:+380961111111"]:active {
-  background-color: var(--blue-color);
-}
+
+/* Style of section HERO */
 
 section.hero {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 1600px;
-  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-image: url("../images/bg.png");
+  background-position: 50% 50%;
+  background-size: auto auto;
+  background-repeat: no-repeat;
 }
 
 .hero h2 {
   width: 696px;
-  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
   text-transform: uppercase;
-  color: var(--color-wite);
+  line-height: 1.36;
+  color: var(--wite);
   text-align: center;
   letter-spacing: 0.06em;
 }
 .hero button {
-  color: var(--color-wite);
-  background-color: var(--blue-color);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px;
   width: 200px;
+
+  color: var(--wite);
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--blue-color);
   border-color: var(--blue-color);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -188,47 +141,61 @@ section.hero {
 }
 /* СЕКЦИЯ ОСОБЕННОСТИ */
 section.feature {
-  width: 1170px;
-  height: 251px;
-  margin-left: 215px;
+  margin-top: 94px;
 }
 
 .feature h2 {
-  display: none;
+  font-size: 0;
 }
 
-.feature ul {
+.feature-list {
   column-gap: 30px;
 }
 
-.feature .svg-pic {
-  justify-content: center;
-  width: 270px;
-  height: 120px;
-  background-color: var(--iight-grey-color);
+.feature-list .svg-pic {
+  padding-top: 25px;
+  min-height: 120px;
+  min-width: 270px;
+  background-color: var(--iight-grey);
   border-radius: 4px;
 }
 
-.feature li h3 {
-  text-transform: uppercase;
-  color: var(--dark-grey);
+.svg-pic object {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.feature li p {
+.feature-list li h3 {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--dark-grey);
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.feature-list li p {
   color: var(--grey);
+  line-height: 1.7;
 }
 
 /* СЕКЦИЯ УСЛУГИ  */
 
-.service h2 {
+.service {
+  margin-top: 94px;
+}
+
+.service h2,
+.team h2 {
+  font-weight: 700;
+  font-size: 36px;
   color: var(--dark-grey);
   text-align: center;
+  margin-top: 0px;
   margin-bottom: 50px;
 }
 .service ul {
-  width: 1170px;
-  height: 251px;
-  margin-left: 215px;
   column-gap: 30px;
 }
 
@@ -236,57 +203,61 @@ section.feature {
 
 .team {
   background-color: #f5f4fa;
-  height: 648px;
+  margin-top: 94px;
+
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team ul {
-  width: 1170px;
-  margin-left: 215px;
   column-gap: 30px;
 }
-
-.team h2 {
-  color: var(--dark-grey);
-  text-align: center;
-  margin-bottom: 50px;
+.team li {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team h3 {
   color: var(--dark-grey);
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team p {
   color: var(--grey);
+  font-size: 16px;
   text-align: center;
+  margin-bottom: 30px;
 }
 /* СЕКЦИЯ ПОДВАЛА */
 footer {
   background-color: #2f303a;
-  height: 192px;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-footer .logo {
-  margin-left: 215px;
+.footer-logo .logo-web {
+  color: var(--blue-color);
 }
-.logo-end-footer {
-  color: var(--color-wite);
-  width: 231px;
+.footer-logo .logo-studio {
+  color: var(--wite);
 }
-.address {
-  margin-left: 215px;
-  color: var(--color-wite);
+address {
   margin-top: 20px;
   font-style: normal;
+}
+.address a {
+  color: var(--wite);
+}
+
+.tel,
+.email {
+  margin-top: 10px;
 }
 .tel a,
 .email a {
   color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-}
-.tel,
-.email {
-  margin-top: 10px;
-  margin-left: 215px;
 }

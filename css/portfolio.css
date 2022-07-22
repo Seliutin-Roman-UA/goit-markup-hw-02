@@ -3,182 +3,200 @@
   --black-color: #000000;
   --dark-grey: #212121;
   --grey: #757575;
-  --color-wite: #ffffff;
-  --iight-grey-color: #f5f4fa;
+  --wite: #ffffff;
+  --iight-grey: #f5f4fa;
+  --almost-wihte: #e5e5e5;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 body {
-  width: 1600px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-size: 14px;
+  font-family: Roboto;
   color: var(--dark-grey);
+  font-size: 14px;
 }
-
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-.page-haeder * {
-  display: inline-flex;
+.conteiner {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header .conteiner,
+.header-nav,
+.header-nav-list,
+.header-contacts,
+.filter,
+.projects {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+
+/* Header slyle */
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
 /*  start stilng logo  */
-h1,
-footer a[href="/index.html"] {
-  margin-left: 215px;
-  margin-top: 24px;
-  margin-bottom: 25px;
+.header-logo,
+.footer-logo {
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
 }
-
-.logo-beginning {
+.logo-web {
   color: var(--blue-color);
 }
-.logo-end {
+.logo-studio {
   color: var(--black-color);
 }
 /* end stiling logo */
 
-.nav-links {
-  margin-left: 68px;
+.header-nav-list {
+  column-gap: 50px;
+  margin-left: 93px;
 }
-.nav-links li,
-.contacts a {
-  font-family: Roboto;
-  font-style: normal;
+.header-nav-list a {
   font-weight: 500;
-  font-size: 14px;
+  color: var(--dark-grey);
 }
-.nav-link-first {
+.header-nav-list a:hover,
+.header-nav-list a:active,
+.header-contacts a:hover,
+.header-contacts a:active {
   color: var(--blue-color);
-  margin: 0px 25px 0px 25px;
 }
-.nav-link-second {
-  margin: 0px 25px 0px 25px;
-  color: var(--dark-grey);
+.header-contacts {
+  column-gap: 50px;
 }
-.nav-link-third {
-  margin: 0px 25px 0px 25px;
-  color: var(--dark-grey);
-}
-.nav-links li:hover,
-.nav-links li:active {
-  background-color: var(--blue-color);
-}
-.contacts {
-  margin-left: 306px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+.header-contacts a {
+  color: var(--grey);
+  font-weight: 500;
 }
 
-a[href="mailto:info@devstudio.com"] {
-  color: var(--blue-color);
-  margin: 0px 25px 0px 25px;
-}
-a[href="tel:+380961111111"] {
-  margin: 0px 25px 0px 25px;
-  color: var(--dark-grey);
-}
-a[href="mailto:info@devstudio.com"]:hover,
-a[href="mailto:info@devstudio.com"]:active {
-  background-color: var(--dark-grey);
-}
-a[href="tel:+380961111111"]:hover,
-a[href="tel:+380961111111"]:active {
-  background-color: var(--blue-color);
-}
 main {
-  background-color: #ffffff;
+  border-top: 1px solid #ececec;
+  padding-top: 100px;
+  padding-bottom: 94px;
 }
-.filter,
-.projects {
-  display: flex;
-  flex-direction: row;
-  margin-left: 513px;
-  flex-wrap: wrap;
+
+.filter {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 8px;
+  margin-bottom: 50px;
 }
 
 .filter li {
-  height: 26px;
   padding: 6px 22px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.625;
   color: #212121;
 }
 .filter li:nth-child(1) {
   color: #ffffff;
   background-color: #2196f3;
 }
-.filter li:hover {
-  cursor: pointer;
+.filter li:hover, .filter li:active{
+  background-color: var(--blue-color);
+  color: var(--wite);
 }
+
+.conteiner-{
+   width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 h1 {
-  display: none;
+  font-size: 0px;
 }
 .projects {
-  margin-top: 56px;
-  margin-left: 200px;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: -15px;
+  
+  ;
 }
 .projects li {
-  margin: 15px;
   width: 370px;
-  height: 404px;
-  background: #ffffff;
   border: 1px solid #eeeeee;
+  margin: 15px;
 }
+
 .projects li h2 {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
+  line-height: 2;
   color: #212121;
   margin-left: 24px;
-  margin-right: 24px;
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
+
 .projects li p {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.875;
   color: #757575;
   margin-left: 24px;
-  margin-right: 24px;
+  margin-bottom: 20px;
 }
+
+/* СЕКЦИЯ ПОДВАЛА */
 
 footer {
-  background-color: #2f303a;
-  height: 192px;
   padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
 }
 
-.logo-end-footer {
-  color: var(--color-wite);
-  width: 231px;
+.footer-logo .logo-web {
+  color: var(--blue-color);
 }
-.address {
-  margin-left: 215px;
-  color: var(--color-wite);
+.footer-logo .logo-studio {
+  color: var(--wite);
+}
+address {
   margin-top: 20px;
   font-style: normal;
+}
+.address a {
+  color: var(--wite);
+}
+
+.tel,
+.email {
+  margin-top: 10px;
 }
 .tel a,
 .email a {
   color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-}
-.tel,
-.email {
-  margin-top: 10px;
-  margin-left: 190px;
 }
